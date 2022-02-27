@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let person = new Object();
+
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = "1200";
+            person.getFullname = function(){
+                return this.firstName + " " + this.lastName;
+            };
+            console.log(person.getFullname());
+        </script>
+    </body>
+</html>

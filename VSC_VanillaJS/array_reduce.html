@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            let points = [40, 100, 1, 5, 25, 10];
+            let sum = points.reduce(function(total, currentValue){
+                console.log(total);
+                console.log(currentValue);
+                return total + currentValue;
+                
+            }, 0);
+            
+            console.log(sum);           
+        </script>
+    </body>
+</html>

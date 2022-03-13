@@ -21,7 +21,7 @@ ctx.lineWidth = 2.5;
 let painting = false;
 
 function handleColorClick(event) {
-    const color = event.target.style.backgroundColor;
+    const color = "#red"; //event.target.style.backgroundColor;
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
     console.log(ctx.strokeStyle)
@@ -51,6 +51,13 @@ function stopPainting() {
     
 }
 
+function handleColorClick(event) {
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+  }
+
+
 if(canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
@@ -59,6 +66,7 @@ if(canvas) {
 }
 
 
+colors[0].addEventListener("click", handleColorClick);
 
 Array.from(colors).forEach(color =>
     color.addEventListener("click", handleColorClick)
